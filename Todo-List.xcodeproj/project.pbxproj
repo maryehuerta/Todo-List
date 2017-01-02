@@ -12,6 +12,8 @@
 		866D74E61E1ACC6900E351B7 /* Todo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 866D74E41E1ACC6900E351B7 /* Todo_List.xcdatamodeld */; };
 		866D74E81E1ACC6900E351B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866D74E71E1ACC6900E351B7 /* Assets.xcassets */; };
 		866D74EB1E1ACC6900E351B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866D74E91E1ACC6900E351B7 /* LaunchScreen.storyboard */; };
+		866D74F51E1AD5B800E351B7 /* TodoListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D74F41E1AD5B800E351B7 /* TodoListsTableViewController.swift */; };
+		866D74F71E1AD66000E351B7 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D74F61E1AD66000E351B7 /* TodoListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		866D74E71E1ACC6900E351B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		866D74EA1E1ACC6900E351B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		866D74EC1E1ACC6900E351B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		866D74F41E1AD5B800E351B7 /* TodoListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListsTableViewController.swift; sourceTree = "<group>"; };
+		866D74F61E1AD66000E351B7 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				866D74E91E1ACC6900E351B7 /* LaunchScreen.storyboard */,
 				866D74EC1E1ACC6900E351B7 /* Info.plist */,
 				866D74E41E1ACC6900E351B7 /* Todo_List.xcdatamodeld */,
+				866D74F41E1AD5B800E351B7 /* TodoListsTableViewController.swift */,
+				866D74F61E1AD66000E351B7 /* TodoListTableViewCell.swift */,
 			);
 			path = "Todo-List";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				866D74E61E1ACC6900E351B7 /* Todo_List.xcdatamodeld in Sources */,
+				866D74F51E1AD5B800E351B7 /* TodoListsTableViewController.swift in Sources */,
 				866D74DE1E1ACC6900E351B7 /* AppDelegate.swift in Sources */,
+				866D74F71E1AD66000E351B7 /* TodoListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

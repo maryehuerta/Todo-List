@@ -1,5 +1,5 @@
 //
-//  TodoListsTableViewController.swift
+//  AddTodoListTableViewController.swift
 //  Todo-List
 //
 //  Created by Mary Huerta on 1/2/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodoListsTableViewController: UITableViewController {
+class AddTodoListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,21 +27,8 @@ class TodoListsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    // MARK: - Segue and Passing Data
     
-    @IBAction func unwindToTodoLists(segue:UIStoryboardSegue) {
-        
-    }
+
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

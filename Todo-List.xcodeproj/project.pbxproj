@@ -14,6 +14,7 @@
 		866D74EB1E1ACC6900E351B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866D74E91E1ACC6900E351B7 /* LaunchScreen.storyboard */; };
 		866D74F51E1AD5B800E351B7 /* TodoListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D74F41E1AD5B800E351B7 /* TodoListsTableViewController.swift */; };
 		866D74F71E1AD66000E351B7 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D74F61E1AD66000E351B7 /* TodoListTableViewCell.swift */; };
+		866D74FD1E1ADFAF00E351B7 /* AddTodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D74FC1E1ADFAF00E351B7 /* AddTodoListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		866D74EC1E1ACC6900E351B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		866D74F41E1AD5B800E351B7 /* TodoListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListsTableViewController.swift; sourceTree = "<group>"; };
 		866D74F61E1AD66000E351B7 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
+		866D74FC1E1ADFAF00E351B7 /* AddTodoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				866D74E41E1ACC6900E351B7 /* Todo_List.xcdatamodeld */,
 				866D74F41E1AD5B800E351B7 /* TodoListsTableViewController.swift */,
 				866D74F61E1AD66000E351B7 /* TodoListTableViewCell.swift */,
+				866D74FC1E1ADFAF00E351B7 /* AddTodoListTableViewController.swift */,
 			);
 			path = "Todo-List";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866D74E61E1ACC6900E351B7 /* Todo_List.xcdatamodeld in Sources */,
+				866D74FD1E1ADFAF00E351B7 /* AddTodoListTableViewController.swift in Sources */,
 				866D74F51E1AD5B800E351B7 /* TodoListsTableViewController.swift in Sources */,
 				866D74DE1E1ACC6900E351B7 /* AppDelegate.swift in Sources */,
 				866D74F71E1AD66000E351B7 /* TodoListTableViewCell.swift in Sources */,

@@ -180,6 +180,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BVZ-DO-47o">
                             <connections>
                                 <action selector="save:" destination="1g3-u4-tpc" id="etq-pb-T6E"/>
+                                <segue destination="u3d-eb-VhS" kind="unwind" unwindAction="unwindToTodoListsWithSegue:" id="iRb-GV-5Nb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

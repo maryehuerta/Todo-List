@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTodoListTableViewController: UITableViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var listNameTextField: UITextField!
     @IBOutlet var photoImageView: UIImageView!
-    
+    var list:ListMO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,12 +70,28 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
         bottomConstraint.isActive = true
         
         
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            list = ListMO(context: appDelegate.persistentContainer.viewContext)
+            list.name = listNameTextField.text
+            
+            if let listImage = photoImageView.image {
+                if let imageData = UIImagePNGRepresentation(listImage) {
+                    list.image = NSData(data: imageData)
+                }
+            }
+            
+            print("Saving data to context ...")
+            appDelegate.saveContext()
+            
+        }
+        
+        
         dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Segues
     
-    @IBAction func save(_ sender: Any) {
+    @IBAction func save(_ sender: AnyObject) {
         if listNameTextField.text == ""  {
             let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)

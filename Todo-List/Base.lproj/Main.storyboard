@@ -178,6 +178,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="listNameTextField" destination="0Ao-UG-UC6" id="3NZ-qV-pnG"/>
+                        <outlet property="photoImageView" destination="DUN-jY-5BR" id="L3Q-2W-s0I"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jym-dH-aIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="u3d-eb-VhS" userLabel="Exit" sceneMemberID="exit"/>

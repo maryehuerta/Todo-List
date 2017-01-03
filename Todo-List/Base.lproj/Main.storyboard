@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="todoListCell" selectionStyle="default" indentationWidth="10" rowHeight="167" id="Sb8-rS-2eL" customClass="TodoListTableViewCell" customModule="Todo_List" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="todoListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoListCell" rowHeight="167" id="Sb8-rS-2eL" customClass="TodoListTableViewCell" customModule="Todo_List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="167"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sb8-rS-2eL" id="w0T-VO-Gvl">
@@ -174,13 +174,13 @@
                     <navigationItem key="navigationItem" title="Add List" id="0if-IP-g4r">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7a2-vD-XWl">
                             <connections>
-                                <segue destination="u3d-eb-VhS" kind="unwind" unwindAction="unwindToTodoListsWithSegue:" id="e8M-5o-ssb"/>
+                                <segue destination="u3d-eb-VhS" kind="unwind" unwindAction="unwindToTodoListsWithSegue:" id="k1A-D0-qt4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BVZ-DO-47o">
                             <connections>
-                                <action selector="save:" destination="1g3-u4-tpc" id="etq-pb-T6E"/>
-                                <segue destination="u3d-eb-VhS" kind="unwind" unwindAction="unwindToTodoListsWithSegue:" id="iRb-GV-5Nb"/>
+                                <action selector="save:" destination="1g3-u4-tpc" id="aq9-Gl-JbO"/>
+                                <segue destination="u3d-eb-VhS" kind="unwind" unwindAction="unwindToTodoListsWithSegue:" id="bFf-rV-kce"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

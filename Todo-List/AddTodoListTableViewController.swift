@@ -70,20 +70,9 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
         bottomConstraint.isActive = true
         
         
-        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-            list = ListMO(context: appDelegate.persistentContainer.viewContext)
-            list.name = listNameTextField.text
+        
             
-            if let listImage = photoImageView.image {
-                if let imageData = UIImagePNGRepresentation(listImage) {
-                    list.image = NSData(data: imageData)
-                }
-            }
-            
-            print("Saving data to context ...")
-            appDelegate.saveContext()
-            
-        }
+        
         
         
         dismiss(animated: true, completion: nil)
@@ -100,7 +89,19 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
         }
         
         print("Name: \(listNameTextField.text)")
-       
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            list = ListMO(context: appDelegate.persistentContainer.viewContext)
+            list.name = listNameTextField.text
+            
+            if let listImage = photoImageView.image {
+                if let imageData = UIImagePNGRepresentation(listImage) {
+                    list.image = NSData(data: imageData)
+                }
+            }
+            
+            print("Saving data to context ...")
+            appDelegate.saveContext()
+    }
     }
     
     
@@ -159,4 +160,5 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
     }
     */
 
-}
+    }
+

@@ -31,6 +31,9 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
 
     // MARK: - Table view data source
 
+    
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -68,7 +71,22 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
         
         dismiss(animated: true, completion: nil)
     }
-            
+    
+    // MARK: - Segues
+    
+    @IBAction func save(_ sender: Any) {
+        if listNameTextField.text == ""  {
+            let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true, completion: nil)
+        }
+        
+        print("Name: \(listNameTextField.text)")
+       
+    }
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

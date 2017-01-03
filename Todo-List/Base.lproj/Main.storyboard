@@ -177,6 +177,11 @@
                                 <segue destination="u3d-eb-VhS" kind="unwind" unwindAction="unwindToTodoListsWithSegue:" id="e8M-5o-ssb"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BVZ-DO-47o">
+                            <connections>
+                                <action selector="save:" destination="1g3-u4-tpc" id="etq-pb-T6E"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="listNameTextField" destination="0Ao-UG-UC6" id="3NZ-qV-pnG"/>

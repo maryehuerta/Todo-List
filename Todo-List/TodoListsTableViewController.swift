@@ -75,6 +75,40 @@ class TodoListsTableViewController: UITableViewController, NSFetchedResultsContr
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            lists.remove(at: indexPath.row)
+        }
+        
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        
+        // Delete button
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete",handler: { (action, indexPath) -> Void in
+            
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                let context = appDelegate.persistentContainer.viewContext
+                let listToDelete = self.fetchResultController.object(at: indexPath)
+                context.delete(listToDelete)
+                
+                appDelegate.saveContext()
+            }
+            
+        })
+        
+        
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        
+        return [deleteAction]
+    }
+
+    
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }

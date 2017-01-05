@@ -59,21 +59,26 @@ class TodoListsTableViewController: UITableViewController, NSFetchedResultsContr
         return lists.count
     }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "todoListCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TodoListTableViewCell
+        
+        // Configure the cell...
+        cell.listImage.image = UIImage(data: lists[indexPath.row].image as! Data)
+        cell.listName.text = lists[indexPath.row].name
+        return cell
+    }
+    
+
     // MARK: - Segue and Passing Data
     
     @IBAction func unwindToTodoLists(segue:UIStoryboardSegue) {
         
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "todoListCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TodoListTableViewCell
-
-        // Configure the cell...
-        cell.listImage.image = UIImage(data: lists[indexPath.row].image as! Data)
-        cell.listName.text = lists[indexPath.row].name
-        return cell
-    }
+    
+    
+       // MARK: - Delete Button
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         

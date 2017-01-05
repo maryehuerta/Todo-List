@@ -89,6 +89,7 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
         }
         
         print("Name: \(listNameTextField.text)")
+       
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
             list = ListMO(context: appDelegate.persistentContainer.viewContext)
             list.name = listNameTextField.text
@@ -101,7 +102,9 @@ class AddTodoListTableViewController: UITableViewController,UIImagePickerControl
             
             print("Saving data to context ...")
             appDelegate.saveContext()
-    }
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     

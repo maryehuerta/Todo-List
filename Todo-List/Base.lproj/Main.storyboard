@@ -179,7 +179,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="BVZ-DO-47o">
                             <connections>
-                                <action selector="save:" destination="1g3-u4-tpc" id="aq9-Gl-JbO"/>
+                                <action selector="save:" destination="1g3-u4-tpc" id="dsP-x5-kyu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
